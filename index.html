@@ -57,23 +57,22 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <div class="col-8 col-sm-5 col-md-6 col-lg-4">
-                                        <label class="text-muted" for="clientId">Title</label>
+                                    <div class="col-8 col-sm-5 col-md-6 col-lg-4 align-self-end">
+                                        <label class="text-muted" for="clientId">Id</label>
                                         <div class="input-group input-group-sm">
-                                            <select type="text" class="form-control rounded-right">
-                                                <option>Mr.</option>
-                                            </select>
+                                            <input type="text" class="form-control rounded-right" name="id" id="id">
                                         </div>
                                     </div>
                                     <div class="col-8 col-sm-5 col-md-6 col-lg-4 align-self-end">
                                         <label class="text-muted" for="clientId">Name</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" name="policyNumber"
-                                                id="policyNumber" value="Albert Keating">
+                                            <input type="text" class="form-control rounded-right" name="name" id="name"
+                                                value="Albert Keating">
                                         </div>
                                     </div>
                                     <div class="col-8 col-sm-5 col-md-4 col-lg-4 align-self-end" id="buttonContainer">
-                                        <button class="btn btn-outline-success btn-sm" type="button">Search</button>
+                                        <button onclick="getClient()" class="btn btn-outline-success btn-sm"
+                                            type="button">Search</button>
                                     </div>
                                 </div>
 
@@ -87,7 +86,7 @@
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-4">
                                         <label for="clientFirstName">Search term 1/2</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="clientFirstName"
+                                            <input type="text" class="form-control rounded-right" id="search"
                                                 value="DC">
                                         </div>
                                     </div>
@@ -102,7 +101,7 @@
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-8">
                                         <label class="text-muted" for="address">Street/House number</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="address"
+                                            <input type="text" class="form-control rounded-right" id="street"
                                                 value="MakeItEleven">
                                         </div>
                                     </div>
@@ -112,7 +111,7 @@
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-8">
                                         <label class="text-muted" for="city">Postal code/City</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="city"
+                                            <input type="text" class="form-control rounded-right" id="postal"
                                                 value="Dublin">
                                         </div>
                                     </div>
@@ -128,19 +127,25 @@
 
                                 <div class="row mb-1">
                                     <div class="col-12 col-sm-5 col-md-8 col-lg-4">
-                                        <label class="text-muted" for="phone">Region</label>
+                                        <label class="text-muted" for="region">Region</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="phone"
+                                            <input type="text" class="form-control rounded-right" id="region"
                                                 value="D18 F4E0">
                                         </div>
                                     </div>
 
                                     <div class="col-12 col-sm-5 col-md-8 col-lg-4">
-                                        <label class="text-muted" for="email">Transportation zone</label>
+                                        <label class="text-muted" for="transportation">Transportation zone</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="email"
+                                            <input type="text" class="form-control rounded-right" id="transportation"
                                                 value="0000000012">
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row float-right">
+                                    <div class="col-12">
+                                        <button onclick="saveClient()" class="btn btn-outline-info btn-sm"
+                                            type="button">Save</button>
                                     </div>
                                 </div>
                                 <div>
